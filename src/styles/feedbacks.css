@@ -1,0 +1,148 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes the full height */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  flex: 1; /* Allow the container to grow and take available space */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50; /* Darker color for the heading */
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Added gap between cards */
+}
+
+.feedback-card-container {
+  margin-top: 20px; /* Add space between the button and the card grid */
+}
+
+.feedback-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 1 1 calc(33.333% - 20px); /* 3 cards per row with gap adjustment */
+  box-sizing: border-box;
+  transition: transform 0.2s; /* Animation on hover */
+  min-width: 300px; /* Minimum width for cards */
+}
+
+.feedback-card:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.card-header {
+  margin-bottom: 15px;
+}
+
+.card-body {
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  background-color: #5c646c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; /* for anchor tags */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+  background-color: #4a5456; /* Darker on hover */
+}
+
+.btn.edit {
+  background-color: #e76f51; /* Different color for edit button */
+}
+
+.btn.edit:hover {
+  background-color: #cf5e4d; /* Darker on hover */
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px; /* Maximum width of modal */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 30px; /* Increased space between form fields */
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-textarea {
+  height: 100px; /* Set a fixed height for the textarea */
+}
+
+.star-rating {
+  color: gold; /* Change the star color */
+}

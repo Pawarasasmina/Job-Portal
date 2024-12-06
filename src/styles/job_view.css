@@ -1,0 +1,329 @@
+/* job_view.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.job-container {
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    margin-left: 300px;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Grid layout for job cards */
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
+}
+
+/* Job card styles */
+.job-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Increased shadow for depth */
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+    text-align: left; /* Align text to the left */
+}
+
+/* Job title styles */
+.job-card h3 {
+    color: #007BFF;
+    margin: 0 0 10px;
+    font-size: 1.25em; /* Larger font size for job title */
+}
+
+/* Job details styles */
+.job-card p {
+    margin: 5px 0;
+    color: #555;
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Hover effects for job cards */
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Add a subtle border to job cards */
+.job-card::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Border height */
+    background: #007BFF; /* Color of the border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between border and content */
+}
+
+
+
+/* Edit and delete button logic */
+.button-group {
+    margin-top: 15px; /* Space between job details and buttons */
+}
+
+/* Common button styles */
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Transition for hover effects */
+}
+
+/* Edit button styles */
+.edit-button {
+    background-color: #007BFF; /* Blue color for edit button */
+}
+
+/* Delete button styles */
+.delete-button {
+    background-color: #FF3B30; /* Red color for delete button */
+}
+
+/* Button hover effects */
+.button:hover {
+    transform: translateY(-3px); /* Raise the button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+}
+
+.button:active {
+    transform: translateY(0); /* Reset on click */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+/*For the Delete Function */
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.edit-button {
+    background-color: #007BFF; /* Blue for edit */
+}
+
+.delete-button {
+    background-color: #DC3545; /* Red for delete */
+}
+
+.cancel-button {
+    background-color: #6c757d; /* Grey for cancel */
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Job card styles for the delete section */
+
+.job-container1 {
+    max-width: 500px;
+    margin: auto;
+    align-items: center;
+    margin-left: 600px;
+    text-align: center;
+}
+
+.job-card1 {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Increased shadow for depth */
+    padding: 20px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Added box-shadow transition */
+    text-align: left; /* Align text to the left */
+}
+
+/* Job title styles */
+.job-card1 h3 {
+    color: #007BFF;
+    margin: 0 0 10px;
+    font-size: 1.25em; /* Larger font size for job title */
+}
+
+/* Job details styles */
+.job-card1 p {
+    margin: 5px 0;
+    color: #555;
+    line-height: 1.6; /* Improved line spacing for readability */
+}
+
+/* Hover effects for job cards */
+.job-card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Add a subtle border to job cards */
+.job-card1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px; /* Border height */
+    background: #007BFF; /* Color of the border */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 10px; /* Space between border and content */
+}
+
+
+
+/* General container for the job edit form */
+.job-container2 {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form title styling */
+.job-container2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form input fields and labels */
+.form-group2 {
+    margin-bottom: 15px;
+}
+
+.form-group2 label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.form-group2 input,
+.form-group2 textarea,
+.form-group2 select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.form-group2 textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Form buttons */
+.button2 {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button.edit-button2 {
+    background-color: #28a745;
+}
+
+.button.cancel-button2 {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.button2:hover {
+    opacity: 0.9;
+}
+
+/* Center the buttons */
+.form-group2 .button2 {
+    width: auto;
+    display: inline-block;
+}
+
+a.button2 {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .job-container {
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/*Search Function */
+
+/* Search Form Styling */
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-form input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #218838;
+}
+

@@ -1,0 +1,194 @@
+/* General body styles */
+body {
+  font-family: "Open Sans", sans-serif; /* Updated font to match registration page */
+  background-color: #fafafa; /* Light background for better contrast */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack elements vertically */
+  min-height: 100vh; /* Full height for body */
+}
+
+/* HEADER STYLES */
+header {
+  background-color: #2c3e50; /* Dark background for contrast */
+  padding: 20px; /* Consistent padding */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logo and navigation */
+  align-items: center; /* Center items vertically */
+  color: white; /* White text for header */
+}
+
+header .logo a {
+  font-family: "Montserrat", sans-serif; /* Custom font */
+  font-size: 24px; /* Font size for visibility */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+header .logo a:hover {
+  color: #e74c3c; /* Highlight color on hover */
+}
+
+nav ul {
+  list-style: none;
+  display: flex; /* Flexbox for horizontal navigation */
+}
+
+nav ul li {
+  margin: 0 15px; /* Space between nav items */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+nav a:hover {
+  color: #e74c3c; /* Highlight color on hover */
+}
+
+/* LOGIN FORM STYLES */
+#page-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-grow: 1; /* Allow this section to grow */
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px; /* Limit width for a more compact layout */
+  background-color: white; /* Solid background for form */
+  padding: 30px; /* Padding for form */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s; /* Add transition for hover effect */
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack children vertically */
+}
+
+.container:hover {
+  transform: translateY(-5px); /* Subtle lift on hover */
+}
+
+h1.login-title {
+  font-size: 2rem; /* Increase title font size */
+  text-align: center; /* Center align title */
+  margin-bottom: 20px; /* Space below title */
+  color: #2c3e50; /* Title color */
+}
+
+/* Adjust input fields for better accessibility and UX */
+.input-wrapper {
+  position: relative;
+  width: 100%; /* Full width for input wrapper */
+  margin-bottom: 20px; /* Space between input fields */
+}
+
+label {
+  display: block; /* Make label block level */
+  margin-bottom: 5px; /* Space below label */
+  font-weight: bold; /* Bold for emphasis */
+  color: #2c3e50; /* Label color */
+}
+
+.login-input {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for better UX */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  transition: border-color 0.3s; /* Transition for focus effect */
+}
+
+.login-input:focus {
+  border-color: #e74c3c; /* Highlight border on focus */
+  outline: none; /* Remove default outline */
+}
+
+.input-wrapper i {
+  position: absolute;
+  left: 10px; /* Space from the left */
+  top: 50%; /* Center icon vertically */
+  transform: translateY(-50%); /* Adjust for vertical center */
+  color: #2c3e50; /* Icon color */
+}
+
+/* Submit button styles */
+.login-button {
+  background-color: #e74c3c; /* Consistent button color */
+  color: white; /* White text */
+  border: none;
+  padding: 10px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, transform 0.2s; /* Transition for background */
+}
+
+.login-button:hover {
+  background-color: #c0392b; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Error message styles */
+.error {
+  color: #721c24; /* Red color for error messages */
+  background-color: #f8d7da; /* Background for error messages */
+  border: 1px solid #f5c6cb; /* Border for error messages */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding for error messages */
+  margin-bottom: 15px; /* Space below error messages */
+}
+
+/* Forgot password link */
+.forgot-password {
+  text-align: center; /* Center align */
+  margin-top: 10px; /* Space above link */
+}
+
+.forgot-password a {
+  color: #2c3e50; /* Link color */
+  text-decoration: none; /* No underline */
+}
+
+.forgot-password a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .container {
+    width: 90%; /* Increase container width on small screens */
+  }
+}
+
+/* FOOTER STYLES */
+footer {
+  background-color: #2c3e50; /* Dark footer background */
+  color: white; /* White text for footer */
+  text-align: center;
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline; /* Inline items for footer links */
+  margin: 0 10px; /* Space between footer links */
+}
+
+footer a {
+  color: white; /* White link color */
+  text-decoration: none; /* No underline */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+
+footer a:hover {
+  color: #e74c3c; /* Highlight color on hover */
+}

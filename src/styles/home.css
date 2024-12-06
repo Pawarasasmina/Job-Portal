@@ -1,0 +1,62 @@
+body {
+  font-family: "Sanchez", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-section {
+  background-color: #1c3d3f; /* Dark blue */
+  padding: 60px 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.search-section {
+  padding: 40px 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.job-listings {
+  padding: 40px 0;
+}
+
+.job-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.job-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-section {
+  background-color: #fafafa; /* Light gray */
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}

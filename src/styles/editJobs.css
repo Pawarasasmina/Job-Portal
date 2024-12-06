@@ -1,0 +1,115 @@
+/* Overall container for the form */
+.job-container2 {
+    max-width: 700px;
+    margin: 50px auto;
+    margin-left: 500px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Form Title */
+.job-container2 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Form Group Styling */
+.form-group2 {
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group2 label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Input Fields */
+.form-group2 input[type="text"],
+.form-group2 input[type="number"],
+.form-group2 select,
+.form-group2 textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+}
+
+/* Textarea styling */
+.form-group2 textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Input focus state */
+.form-group2 input:focus,
+.form-group2 textarea:focus,
+.form-group2 select:focus {
+    outline: none;
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.2);
+}
+
+/* Button styles */
+.button2 {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-right: 10px;
+}
+
+.button2:hover {
+    background-color: #0056b3;
+}
+
+/* Cancel button styling */
+.cancel-button2 {
+    background-color: #6c757d;
+}
+
+.cancel-button2:hover {
+    background-color: #5a6268;
+}
+
+/* Update button specific style */
+.edit-button2 {
+    background-color: #28a745;
+}
+
+.edit-button2:hover {
+    background-color: #218838;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .job-container2 {
+        padding: 20px;
+    }
+
+    .button2 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

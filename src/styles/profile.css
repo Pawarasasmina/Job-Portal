@@ -1,0 +1,463 @@
+/* General styles */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fafafa; /* Light background color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height */
+}
+
+.navbar,
+.footer {
+  background-color: #e76f51; /* Main theme color */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky; /* Keep navbar at the top */
+  top: 0; /* Sticky position */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Profile Container */
+.profile-container {
+  display: flex;
+  flex-grow: 1; /* Allow it to take up available space */
+  margin: 20px; /* Add margin around profile container */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 25%;
+  background-color: #4ecdc4; /* Sidebar color */
+  padding: 1.5rem;
+  border-right: 2px solid #ddd; /* Add a border to the right */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Soft shadow on the right */
+  transition: width 0.3s; /* Smooth width transition */
+}
+
+.sidebar:hover {
+  width: 30%; /* Expand on hover for better interaction */
+}
+
+/* Profile Info */
+.profile-info {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Space below profile info */
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px; /* Increased size */
+  height: 100px; /* Increased size */
+  border: 3px solid white; /* Thicker white border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 1rem 0; /* Increased margin for better spacing */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* White text color */
+  padding: 0.5rem 1rem; /* Added horizontal padding */
+  display: block; /* Make the entire area clickable */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+  transform: translateX(5px); /* Subtle slide effect */
+}
+
+/* Button Styles */
+.add-post-btn {
+  background-color: #e76f51; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem; /* Increased padding */
+  cursor: pointer;
+  width: 100%; /* Full width */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.add-post-btn:hover {
+  background-color: #d85f48; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1; /* Allow it to take up available space */
+  padding: 2rem;
+  background-color: white; /* Main content background */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 8px; /* Rounded corners */
+  margin-left: 20px; /* Space between sidebar and main content */
+}
+
+.card {
+  background-color: #ffffff; /* White card background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  margin-bottom: 20px; /* Space below the card */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.welcome-message {
+  font-size: 24px; /* Welcome message size */
+}
+
+.form-actions {
+  margin-top: 20px; /* Space above actions */
+}
+
+.button {
+  background-color: #4ecdc4; /* Button color */
+  color: white; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 0.7rem; /* Padding for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+  background-color: #3bb6b3; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.button.cancel {
+  background-color: #e76f51; /* Cancel button color */
+}
+
+.button.cancel:hover {
+  background-color: #d85f48; /* Darker shade on hover */
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem; /* Space between sections */
+  padding: 1rem;
+  background-color: #e9ecef; /* Light background for stats section */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Water and Steps Container */
+.water-steps {
+  display: flex;
+  justify-content: space-between;
+  flex: 1; /* Allow it to grow */
+  margin-right: 1rem; /* Space between water and steps */
+}
+
+/* Individual Stats Cards */
+.water-consumed,
+.steps-walked {
+  background-color: #4ecdc4; /* Individual card background color */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  flex: 1; /* Allow each section to grow equally */
+  margin: 0 0.5rem; /* Space between sections */
+  text-align: center; /* Center align text */
+  transition: transform 0.2s; /* Smooth scale effect */
+}
+
+.water-consumed:hover,
+.steps-walked:hover {
+  transform: scale(1.05); /* Slightly grow on hover */
+}
+
+/* Calories Burned and Macros */
+.calories-burned {
+  background-color: #e76f51; /* Calories burned card color */
+  color: white; /* White text color */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  text-align: center; /* Center align text */
+  flex: 1; /* Allow it to grow */
+  margin-left: 1rem; /* Space between calories burned and macros */
+}
+
+.macros {
+  background-color: #e9ecef; /* Light background for macros */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  flex: 1; /* Allow it to grow */
+  margin-left: 1rem; /* Space between macros and calories burned */
+}
+
+/* Range Slider Styles */
+.macros label {
+  display: flex;
+  justify-content: space-between; /* Space out labels and sliders */
+  margin-bottom: 0.5rem; /* Space between labels */
+}
+
+.macros input[type="range"] {
+  width: 100%; /* Full width */
+  margin-top: 0.5rem; /* Space above sliders */
+}
+
+/* Appointments and Goals Section */
+.appointments-goals {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem; /* Space above appointments and goals */
+}
+
+/* Individual Appointment and Goals Cards */
+.appointments,
+.goals {
+  background-color: #4ecdc4; /* Background color for appointments and goals */
+  padding: 1rem;
+  border-radius: 8px; /* Rounded corners */
+  flex: 1; /* Allow equal growth */
+  margin: 0 0.5rem; /* Space between sections */
+  position: relative; /* Position relative for button alignment */
+}
+
+/* Goals Button */
+.goals button {
+  background-color: #e76f51; /* Button color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Padding */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  position: absolute; /* Position button at the bottom */
+  bottom: 1rem; /* Space from the bottom */
+  right: 1rem; /* Space from the right */
+}
+
+.goals button:hover {
+  background-color: #d85f48; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .stats-section,
+  .appointments-goals {
+    flex-direction: column; /* Stack sections on smaller screens */
+  }
+
+  .water-steps {
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+
+  .water-consumed,
+  .steps-walked,
+  .calories-burned,
+  .macros,
+  .appointments,
+  .goals {
+    margin: 0.5rem 0; /* Space between stacked items */
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .goals button {
+    width: 100%; /* Full width button on smaller screens */
+  }
+}
+/* Macros Section */
+.macros {
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 1.5rem; /* Increased padding for spacious layout */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 1rem 0; /* Margin for spacing */
+}
+
+/* Title Styling */
+.macros h4 {
+  margin-bottom: 1rem; /* Space below the title */
+  font-size: 1.5rem; /* Increased font size */
+  color: #379d9d; /* Custom color for title */
+  text-align: center; /* Center align title */
+}
+
+/* Label Styling */
+.macros label {
+  display: flex;
+  justify-content: space-between; /* Space between label and input */
+  align-items: center; /* Vertically center align */
+  margin: 1rem 0; /* Space between labels */
+  font-size: 1rem; /* Standard font size */
+  color: #5c646c; /* Text color for labels */
+}
+
+/* Range Slider Styles */
+.macros input[type="range"] {
+  -webkit-appearance: none; /* Remove default appearance */
+  width: 70%; /* Set width of slider */
+  height: 6px; /* Height of the slider track */
+  background: #e0e0e0; /* Track color */
+  border-radius: 5px; /* Rounded track */
+  outline: none; /* Remove outline */
+}
+
+/* Thumb Styles */
+.macros input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default thumb appearance */
+  appearance: none; /* Remove default thumb appearance */
+  width: 20px; /* Width of thumb */
+  height: 20px; /* Height of thumb */
+  border-radius: 50%; /* Circular thumb */
+  background: #379d9d; /* Thumb color */
+  cursor: pointer; /* Pointer on hover */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+.macros input[type="range"]::-moz-range-thumb {
+  width: 20px; /* Width of thumb */
+  height: 20px; /* Height of thumb */
+  border-radius: 50%; /* Circular thumb */
+  background: #379d9d; /* Thumb color */
+  cursor: pointer; /* Pointer on hover */
+  transition: background 0.3s; /* Smooth transition */
+}
+
+/* Thumb hover effect */
+.macros input[type="range"]:hover::-webkit-slider-thumb {
+  background: #2b7c7b; /* Darker color on hover */
+}
+
+.macros input[type="range"]:hover::-moz-range-thumb {
+  background: #2b7c7b; /* Darker color on hover */
+}
+
+/* People to Follow Section */
+.people-follow {
+  background-color: #4ecdc4; /* People to Follow section */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.people-follow ul {
+  list-style: none; /* Remove list style */
+  padding: 0; /* Remove padding */
+}
+
+.people-follow li {
+  display: flex; /* Align items in a row */
+  justify-content: space-between; /* Space between names and buttons */
+  padding: 0.5rem 0; /* Space between list items */
+  border-bottom: 1px solid #ddd; /* Light divider line */
+}
+
+.people-follow li:last-child {
+  border-bottom: none; /* Remove bottom border on last item */
+}
+
+.people-follow button {
+  background-color: #e76f51; /* Follow button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem; /* Smaller padding */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.people-follow button:hover {
+  background-color: #d85f48; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Popup Card Styles */
+.popup-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* White background for the popup */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 2rem; /* Padding around the content */
+  z-index: 1000; /* Ensure it appears above other content */
+  display: none; /* Hidden by default */
+}
+
+.popup-card.visible {
+  display: block; /* Show the popup when visible class is added */
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1rem; /* Space between form fields */
+}
+
+.form-group label {
+  display: block; /* Block display for labels */
+  margin-bottom: 0.5rem; /* Space below labels */
+}
+
+.form-group input,
+.form-group select {
+  width: 100%; /* Full width */
+  padding: 0.5rem; /* Padding inside inputs */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Inset shadow for depth */
+  transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #e76f51; /* Change border color on focus */
+}
+
+/* Success and Error Messages */
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column; /* Stack sidebar and main content */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width for smaller screens */
+    border-right: none; /* Remove right border */
+    margin-bottom: 20px; /* Space below sidebar */
+  }
+
+  .main-content {
+    padding: 1rem; /* Reduce padding on smaller screens */
+    margin-left: 0; /* Remove margin left on smaller screens */
+  }
+
+  .water-steps {
+    flex-direction: column; /* Stack water and steps sections */
+  }
+
+  .water-consumed,
+  .steps-walked,
+  .calories-burned,
+  .macros,
+  .appointments,
+  .goals {
+    margin: 1rem 0; /* Space between stacked items */
+  }
+}

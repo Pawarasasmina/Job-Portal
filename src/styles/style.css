@@ -1,0 +1,300 @@
+/* General body styles */
+body {
+  font-family: Arial, sans-serif; /* Base font for the site */
+  background-color: #fafafa; /* Light background color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* NAVBAR Styling */
+header {
+  background-color: #1c3d3f;
+  padding: 20px 0; /* Increased padding for a taller navbar */
+  position: relative;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-family: "Russo One", sans-serif;
+  font-size: 32px; /* Increased logo font size */
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.logo a:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Increased gap between nav items */
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Increased font size for navbar items */
+  font-weight: 600; /* Increased font weight for more emphasis */
+  padding: 10px 15px; /* Increased padding for larger clickable area */
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-50%);
+}
+
+nav ul li a:hover::before {
+  width: 100%;
+}
+
+nav ul li a:hover {
+  transform: scale(1.2); /* Increased scale on hover */
+}
+
+/* Burger menu styles */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 30px; /* Increased burger icon size */
+  height: 4px;
+  background-color: white;
+  margin: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute;
+    top: 70px; /* Adjust based on your header height */
+    right: 0;
+    background-color: #4ecdc4;
+    height: 100vh; /* Full height */
+    width: 100%; /* Full width */
+    transition: transform 0.5s ease-in-out;
+    z-index: 10; /* Ensure it overlays other elements */
+  }
+
+  nav ul.active {
+    display: flex; /* Show nav links when active */
+  }
+
+  .burger {
+    display: block; /* Show the burger on smaller screens */
+  }
+}
+
+/* CONTACT PAGE STYLES */
+.contact-container {
+  display: flex; /* Flexbox for aligning form and map */
+  flex-direction: column; /* Stack elements vertically on smaller screens */
+  align-items: center; /* Center content horizontally */
+  padding: 2rem; /* Add padding around the contact container */
+}
+
+/* HEADER STYLING */
+.contact-header {
+  text-align: center; /* Center-align the heading */
+  margin-bottom: 2rem; /* Add space below the header */
+}
+
+.contact-header h1 {
+  font-size: 2.5rem; /* Larger font size for the main heading */
+  color: #1c3d3f; /* Dark teal color */
+}
+
+/* CONTACT INFO SECTION */
+.contact-info p {
+  font-size: 1.1rem; /* Slightly larger font for the contact information */
+  color: #4ecdc4; /* Lighter teal color for the contact text */
+}
+
+/* CONTACT CONTENT SECTION */
+.contact-content {
+  display: flex; /* Flexbox to align form and map side by side */
+  justify-content: space-between; /* Space between the form and map */
+  width: 80%; /* Set width to 80% of the page */
+}
+
+/* CONTACT FORM STYLES */
+.contact-form {
+  width: 45%; /* Form takes up 45% of the available space */
+  background-color: #ffffff; /* White background for the form */
+  padding: 2rem; /* Padding inside the form container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+}
+
+.contact-form h2 {
+  font-size: 1.8rem; /* Larger font size for the form heading */
+  margin-bottom: 1rem; /* Space below the heading */
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* Inputs and textarea take full width */
+  padding: 1rem; /* Padding inside inputs */
+  margin: 0.5rem 0; /* Add space above and below inputs */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #ddd; /* Light grey border */
+}
+
+.contact-form button {
+  background-color: #4ecdc4; /* Teal background for submit button */
+  color: #ffffff; /* White text for button */
+  padding: 1rem; /* Padding inside the button */
+  border: none; /* Remove border from the button */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.contact-form button:hover {
+  background-color: #379d9d; /* Darker teal when hovered */
+}
+
+/* MAP STYLES */
+.map {
+  width: 45%; /* Map takes up 45% of the available space */
+}
+
+iframe {
+  width: 100%; /* Map iframe takes full width of its container */
+  height: 400px; /* Fixed height for the map */
+}
+
+/* Footer Container Styles */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+  justify-content: space-between;
+  background-color: #1c3d3f; /* Dark background for footer */
+  padding: 2rem 1rem; /* Adequate padding */
+  color: #fafafa; /* Light text color */
+}
+
+/* Footer Section Styling */
+.footer-section {
+  flex: 1; /* Allows each section to expand equally */
+  margin: 1rem; /* Spacing between sections */
+}
+
+.footer-section h3 {
+  font-size: 1.3rem; /* Larger title font */
+  margin-bottom: 1rem;
+  color: #4ecdc4; /* Teal color for headings */
+}
+
+.footer-section ul {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+  color: #fafafa; /* Link color */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition effect */
+}
+
+.footer-section ul li a:hover {
+  color: #4ecdc4; /* Hover color change for links */
+}
+
+/* Footer Bottom Styling */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  border-top: 1px solid #4ecdc4; /* Border to separate bottom section */
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+/* Bottom Links */
+.bottom-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem; /* Space between links */
+}
+
+.bottom-links li a {
+  color: #fafafa;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.bottom-links li a:hover {
+  color: #4ecdc4; /* Hover effect on bottom links */
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between icons */
+  margin-top: 1rem;
+}
+
+.social-icons a img {
+  width: 32px;
+  height: 32px; /* Set icon size */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons a:hover img {
+  transform: scale(1.1); /* Magnifying effect on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack footer sections vertically on smaller screens */
+  }
+
+  .footer-section {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+
+  .social-icons {
+    margin-top: 2rem;
+  }
+}
